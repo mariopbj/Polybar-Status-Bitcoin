@@ -4,10 +4,10 @@ action=$(zenity --width=200 --height=150 --list --title="Escolha uma ação" --c
 
 case $action in
     "Desligar")
-        cinnamon-session-quit --power-off
+        systemctl poweroff
         ;;
     "Reiniciar")
-        cinnamon-session-quit --reboot
+        systemctl reboot
         ;;
     "Suspender")
         systemctl suspend
@@ -15,3 +15,4 @@ case $action in
     *)
         ;;
 esac
+
