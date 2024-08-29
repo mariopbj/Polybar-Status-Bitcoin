@@ -9,7 +9,7 @@ def preco_btc():
         return preco['bitcoin']['usd']
     
     except:
-        return "Indisponivel"
+        return "Erro"
 
 
 def preco_ult_200():
@@ -20,7 +20,7 @@ def preco_ult_200():
         return precos
     
     except:
-        return "Indisponivel"
+        return "Erro"
 
 
 def calcular_multiplo_de_mayer():
@@ -32,7 +32,7 @@ def calcular_multiplo_de_mayer():
         return str(multiplo_de_mayer)[:4]
     
     except:
-        return "Indisponivel"
+        return "Erro"
 
 
 def taxas_onchain():
@@ -42,9 +42,9 @@ def taxas_onchain():
             taxas = api_mempool.json()
             return taxas
         else:
-            return "Indisponivel"
+            return "Erro"
     except:
-        return "Indisponivel"
+        return "Erro"
     
 
 def preco_btc_formatado():
@@ -53,7 +53,7 @@ def preco_btc_formatado():
         return preco_formatado
     
     except:
-        return 'Indisponivel'
+        return 'Erro'
     
 
 def taxas_onchain_formatado():
@@ -71,8 +71,8 @@ def taxas_onchain_formatado():
 
     except:
         falha = {
-        'fastestFee': 'Indisponivel',
-        'halfHourFee': 'Indisponivel',
-        'hourFee': 'Indisponivel'
+        'fastestFee': 'Erro',
+        'halfHourFee': 'Erro',
+        'hourFee': 'Erro'
     }
         return falha
